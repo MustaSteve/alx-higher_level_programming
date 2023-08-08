@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-j = 0
-for n in range(ord('p'), ord('d') - 1, -1):
-    print("{}".format(chr(n - j)), end="")
-    j = 32 if j == 0 else 0
+for j in range(122, 96, -1):
+    print("{:s}".format(chr(j) if j % 2 == 0 else chr(j - 32)), end="")
