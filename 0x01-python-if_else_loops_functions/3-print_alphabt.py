@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for l in range(97, 123):
-    if chr(l) not in ('q', 'e'):
-        print("{}".format(chr(l)), end="")
+for n in range(97, 123):
+    if n != 113 and n != 101:
+        print("{}".format(n), end="")
