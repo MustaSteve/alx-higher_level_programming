@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-
 def fizzbuzz():
-    while (c < 100):
+    c = 1
+    while(c < 100):
 
         if c % 5 == 0 and c % 3 == 0:
-            print("FizzBuzz", end=' ')
+            print("FizzBuzz ", end='')
         elif c % 3 == 0:
-            print("Fizz", end=' ')
+            print("Fizz ", end='')
         elif c % 5 == 0:
-            print("Buzz", end=' ')
+            print("Buzz ", end='')
         else:
-            print("{:c} ".format(c), end=' ')
-            c += 1
-            print ("Buzz", end=' ') 
+            print("{:d} ".format(c), end='')
+        c += 1
+    print("Buzz ", end='')
