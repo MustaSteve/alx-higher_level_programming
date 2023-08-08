@@ -1,48 +1,42 @@
 #include "lists.h"
 
-/**
-  *insert_node - Insert a number into a singly-linked list
-  * @head: A pointer the head.
-  * @number: Number to insert.
-  * Return: If the function fails - NULL
-  * Otherwise - a pointer to the n node
-  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *n_node, *y_node;
-	if (head == NULL)
-		return(NULL);
+	listint_t *newnode;
+	listint_t *currentnode;
 
-	n_node = malloc(sizeof(listint_t));
+	currentnode = *head;
 
-	if (n_node == NULL)
+	newnode = malloc(sizeof(listint_t));
+	if (!newnode)
 		return (NULL);
-	y_node = *head;
-	n_node->p = number;
-	n_node->next = NULL;
-	if (*head == NULL)
-	{
-		*head = n_node;
-		return(n_node);
-	}
-	if (y_node->p > number)
-	{
-		n_node->next = y_node;
-		*head = n_node;
-		return(n_node);
-	}
-	
-	while (y_node->next != NULL)
-	{
-		if(y_node->next->p > number)
-		{
-			n_node->next = y_node->next;
-			y_node->next = n_node;
-			return(n_node);
-		}
-		y_node = y_node->next;
-	}
-	y_node->next = n_node;
-	return(n_node);
+	newnode->s = number;
+	newnode->next = NULL;
 
+	if (!*head)
+		*head = newnode;
+	else if (currentnode->s >= number)
+	{
+		*head = newnode;
+		newnode->next = currentnode;
+	}
+	else if (currentnode->next)
+	{
+		while (currentnode->next)
+		{
+			if (currentnode->next->s >= number)
+			{
+				newnode->next = currentnode->next;
+				currentnode->next = newnode;
+				return (newnode);
+			}
+			if (!currentnode->next->next)
+				break;
+			currentnode = currentnode->next;
+		}
+		currentnode->next->next = newnode;
+	}
+	else
+		currentnode->next = newnode;
+	return (newnode);
 }
