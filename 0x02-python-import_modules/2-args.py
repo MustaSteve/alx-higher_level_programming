@@ -2,7 +2,8 @@
 if __name__ == "__main__":
     import sys
 
-if len(sys.argv) == 1:
+
+     element= len(sys.argv) - 1
     if element == 0:
         print("0 arguments.")
     elif element == 1:
