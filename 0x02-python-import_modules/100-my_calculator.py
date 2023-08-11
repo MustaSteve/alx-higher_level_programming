@@ -6,16 +6,16 @@ if __name__ == "__main__":
     if len != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    a = int(argv[1])
-    b = int(argv[3])
+    n1 = int(argv[1])
+    n2 = int(argv[3])
     if argv[2] == '+':
-        print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+        print("{:d} + {:d} = {:d}".format(n1, n2, add(n1, n2)))
     elif argv[2] == '-':
-        print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
+        print("{:d} - {:d} = {:d}".format(n1, n2, sub(n1, n2))) 
     elif argv[2] == '*':
-        print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
+        print("{:d} * {:d} = {:d}".format(n1, n2, mul(n1, n2)))
     elif argv[2] == '/':
-        print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+        print("{:d} / {:d} = {:d}".format(n1, n2, div(n1, n2)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
