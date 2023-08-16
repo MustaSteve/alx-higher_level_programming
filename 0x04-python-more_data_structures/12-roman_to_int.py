@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
             if num_bef < my_dictionary[i]:
                 num_curr -= num_bef * 2
             num_bef = my_dictionary[i]
-            if i == character_before:
+            if i == char_bef:
                 count += 1
                 if count == 3:
                     return 0
