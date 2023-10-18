@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Creates and fills a table second_table with attributes id, name and score.
+=======
+reates and fills a table second_table with attributes id, name and score.
+>>>>>>> e7501c79315504f111118088e7ff4b37e64e8210
 =======
 reates and fills a table second_table with attributes id, name and score.
 >>>>>>> e7501c79315504f111118088e7ff4b37e64e8210

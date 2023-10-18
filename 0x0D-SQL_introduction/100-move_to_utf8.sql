@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Converts the entire database hbtn_0c_0 to UTF8.
+=======
+onverts the entire database hbtn_0c_0 to UTF8.
+>>>>>>> e7501c79315504f111118088e7ff4b37e64e8210
 =======
 onverts the entire database hbtn_0c_0 to UTF8.
 >>>>>>> e7501c79315504f111118088e7ff4b37e64e8210
